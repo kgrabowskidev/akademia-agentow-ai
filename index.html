@@ -312,6 +312,69 @@
         .card:nth-child(n+7) {
             animation-delay: 0.6s;
         }
+        .content-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 2rem;
+            align-self: flex-start;
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.5rem;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(0, 164, 180, 0.1);
+            color: var(--secondary);
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -323,16 +386,51 @@
             <h1>Akademia Agentów AI</h1>
             <p class="subtitle">Poznaj najważniejsze pojęcia ze świata sztucznej inteligencji, agentów AI i frameworka LangGraph</p>
             <a href="https://www.naffy.io/akademia-agentow-ai/" class="cta-btn">Zapisz się na kurs wprowadzenie do LangGraph</a>
+            <div style="text-align: center; margin-top: 2rem;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/X6Juo628VZE?si=WXSoTJVCS3nQWik2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </header>
 
     <main>
         <div class="container">
             <h2>Kluczowe pojęcia</h2>
-            <p>Zrozum fundamenty nowoczesnej sztucznej inteligencji i tworzenia agentów AI.</p>
+            <p>Zrozum fundamenty nowoczesnej sztucznej inteligencji i poznaj technologie, które zmieniają świat.</p>
+<p>Agenci AI to przyszłość technologii - systemy zdolne do samodzielnego działania, podejmowania decyzji i współpracy z człowiekiem.</p>
+<p>Poniżej znajdziesz najważniejsze koncepcje, które pomogą Ci lepiej zrozumieć i wykorzystać potencjał tej rewolucyjnej technologii.</p>
+            <h2><span></span></h2>
             
+            <div class="content-wrapper">
+                <div class="sidebar">
+                    <h3>Spis treści</h3>
+                    <ul>
+                        <li><a href="#agent-ai">Agent AI</a></li>
+                        <li><a href="#langgraph">LangGraph</a></li>
+                        <li><a href="#llm">Duży model językowy (LLM)</a></li>
+                        <li><a href="#pamiec-kontekstowa">Pamięć kontekstowa</a></li>
+                        <li><a href="#inzynieria-promptow">Inżynieria promptów</a></li>
+                        <li><a href="#chatbot">Chatbot</a></li>
+                        <li><a href="#narzedzia">Narzędzia dla agenta AI</a></li>
+                        <li><a href="#langchain">LangChain</a></li>
+                        <li><a href="#rag">Retrieval-Augmented Generation</a></li>
+                        <li><a href="#wektorowa-baza">Wektorowa baza danych</a></li>
+                        <li><a href="#embedding">Embedding</a></li>
+                        <li><a href="#nlp">Przetwarzanie języka naturalnego</a></li>
+                        <li><a href="#gen-ai">Generatywna sztuczna inteligencja</a></li>
+                        <li><a href="#prompt">Prompt</a></li>
+                        <li><a href="#halucynacje">Halucynacje AI</a></li>
+                        <li><a href="#pipeline">Pipeline</a></li>
+                        <li><a href="#fine-tuning">Fine-tuning</a></li>
+                        <li><a href="#autogpt">AutoGPT</a></li>
+                        <li><a href="#uczenie-glebokie">Uczenie głębokie</a></li>
+                        <li><a href="#etyka-ai">Etyka AI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="main-content">
+
             <div class="grid">
-                <div class="card">
+                <div class="card" id="agent-ai">
                     <div class="card-icon">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -340,7 +438,7 @@
                     <p>Program AI, który potrafi samodzielnie podejmować decyzje i działania, żeby osiągnąć wyznaczony cel. W odróżnieniu od zwykłego chatbota, agent AI może nie tylko prowadzić rozmowę, ale też wykonywać zadania - przeszukiwać internet, uruchamiać funkcje w aplikacji czy obsługiwać urządzenia.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="langgraph">
                     <div class="card-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
@@ -348,7 +446,7 @@
                     <p>Framework do budowania agentów AI w formie grafu, stworzony jako rozszerzenie możliwości LangChain. Pozwala projektować elastyczne schematy z pętlami i rozgałęzieniami, definiując agenta AI jako zestaw powiązanych ze sobą modułów (węzłów).</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="llm">
                     <div class="card-icon">
                         <i class="fas fa-brain"></i>
                     </div>
@@ -356,7 +454,7 @@
                     <p>Model AI przeszkolony na ogromnych zbiorach tekstu, zdolny do generowania i rozumienia języka naturalnego na zaawansowanym poziomie. Taki model ma miliardy parametrów, dzięki czemu może zapamiętać wiele wzorców językowych.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="pamiec-kontekstowa">
                     <div class="card-icon">
                         <i class="fas fa-memory"></i>
                     </div>
@@ -364,7 +462,7 @@
                     <p>Zdolność systemu AI do pamiętania poprzednich interakcji i informacji podczas dalszej rozmowy lub działania. Dzięki niej agent nie zapomina, o czym rozmawialiście przed chwilą i może wykorzystać wcześniejsze ustalenia.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="inzynieria-promptow">
                     <div class="card-icon">
                         <i class="fas fa-keyboard"></i>
                     </div>
@@ -372,7 +470,7 @@
                     <p>Sztuka odpowiedniego formułowania poleceń dla modeli AI, aby uzyskać od nich jak najlepsze rezultaty. Może to obejmować wskazanie modelowi roli, określenie formatu odpowiedzi albo podanie przykładów.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="chatbot">
                     <div class="card-icon">
                         <i class="fas fa-comments"></i>
                     </div>
@@ -380,7 +478,7 @@
                     <p>Program komputerowy zaprojektowany do prowadzenia rozmowy z człowiekiem w języku naturalnym. Współczesne chatboty wykorzystujące LLM potrafią rozumieć kontekst rozmowy i udzielać szczegółowych odpowiedzi.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="narzedzia">
                     <div class="card-icon">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -388,7 +486,7 @@
                     <p>Zewnętrzne funkcje lub usługi, z których agent może korzystać, by wykonać swoje zadania. Dzięki narzędziom agent nie jest ograniczony tylko do tego, co "wie" jego model językowy – może aktywnie zdobywać nowe informacje.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="langchain">
                     <div class="card-icon">
                         <i class="fas fa-link"></i>
                     </div>
@@ -396,7 +494,7 @@
                     <p>Framework ułatwiający tworzenie aplikacji opartych o modele językowe (LLM). LangChain dostarcza gotowe komponenty, dzięki którym programista może łączyć modele AI z różnymi źródłami danych, narzędziami i logiką biznesową.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="rag">
                     <div class="card-icon">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -404,7 +502,7 @@
                     <p>Technika tworzenia odpowiedzi przez model AI, która łączy generowanie tekstu z wyszukiwaniem informacji. Model najpierw przeszukuje zewnętrzne źródła danych, a następnie generuje odpowiedź na ich podstawie.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="wektorowa-baza">
                     <div class="card-icon">
                         <i class="fas fa-database"></i>
                     </div>
@@ -412,7 +510,7 @@
                     <p>Specjalny rodzaj bazy danych zaprojektowany do przechowywania i wyszukiwania wektorów (np. embeddingów tekstu). Potrafi szybko odnaleźć wektory najbardziej zbliżone do zadanego.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="embedding">
                     <div class="card-icon">
                         <i class="fas fa-vector-square"></i>
                     </div>
@@ -420,7 +518,7 @@
                     <p>Technika polegająca na zamianie danych (np. słów, zdań) na wektory liczb, tak aby liczby te oddawały znaczenie tych danych. Embeddingi pozwalają AI porównywać znaczenie tekstów.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="nlp">
                     <div class="card-icon">
                         <i class="fas fa-microscope"></i>
                     </div>
@@ -428,7 +526,7 @@
                     <p>Dziedzina sztucznej inteligencji skupiona na zrozumieniu i generowaniu ludzkiego języka przez maszyny. Systemy NLP starają się pojąć tekst lub mowę w taki sposób, jak robi to człowiek.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="gen-ai">
                     <div class="card-icon">
                         <i class="fas fa-cube"></i>
                     </div>
@@ -436,7 +534,7 @@
                     <p>Rodzaj AI, która tworzy nowe treści: teksty, obrazy, muzykę czy inne dane, zamiast tylko je klasyfikować czy analizować. Pozwala np. na tworzenie unikalnych obrazów z opisu tekstowego.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="prompt">
                     <div class="card-icon">
                         <i class="fas fa-clipboard-list"></i>
                     </div>
@@ -444,7 +542,7 @@
                     <p>Wejściowe zapytanie lub instrukcja, którą przekazujemy modelowi językowemu. Promptem może być pytanie zadane do chatbota, prośba o wygenerowanie tekstu lub kawałek rozpoczętego zdania do dokończenia.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="halucynacje">
                     <div class="card-icon">
                         <i class="fas fa-exclamation-circle"></i>
                     </div>
@@ -452,7 +550,7 @@
                     <p>Sytuacja, gdy AI wymyśla odpowiedź, która brzmi przekonująco, ale nie jest zgodna z prawdą. Model językowy, próbując odpowiedzieć na pytanie, może podać zmyślone "fakty" – np. wymyślone liczby czy fałszywe informacje.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="pipeline">
                     <div class="card-icon">
                         <i class="fas fa-sync"></i>
                     </div>
@@ -460,7 +558,7 @@
                     <p>Szereg kroków, które wykonujemy kolejno, aby osiągnąć rezultat. W kontekście agentów i modeli językowych pipeline to często ułożenie kilku operacji po sobie dla uzyskania ostatecznego wyniku.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="fine-tuning">
                     <div class="card-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -468,7 +566,7 @@
                     <p>Dodatkowe trenowanie modelu AI, który już wcześniej został wstępnie wytrenowany, w celu przystosowania go do konkretnego zadania lub dziedziny. Dzięki temu model lepiej radzi sobie w wąskiej specjalizacji.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="autogpt">
                     <div class="card-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
@@ -476,7 +574,7 @@
                     <p>Eksperymentalny projekt autonomicznego agenta AI, który sam inicjuje kolejne działania, by osiągnąć ogólny cel zadany przez użytkownika, z minimalnym nadzorem człowieka.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="uczenie-glebokie">
                     <div class="card-icon">
                         <i class="fas fa-code-branch"></i>
                     </div>
@@ -484,7 +582,7 @@
                     <p>Specjalny rodzaj uczenia maszynowego, który wykorzystuje bardzo złożone, wielowarstwowe sieci neuronowe. Im więcej warstw, tym bardziej złożone zależności może nauczyć się model.</p>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="etyka-ai">
                     <div class="card-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
@@ -492,6 +590,7 @@
                     <p>Zbiór zagadnień dotyczących odpowiedzialnego tworzenia i używania sztucznej inteligencji. Obejmuje m.in. dbałość o prywatność, unikanie dyskryminacji i uprzedzeń oraz zapewnienie bezpieczeństwa.</p>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 
