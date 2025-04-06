@@ -386,9 +386,7 @@
             <h1>Akademia Agentów AI</h1>
             <p class="subtitle">Poznaj najważniejsze pojęcia ze świata sztucznej inteligencji, agentów AI i frameworka LangGraph</p>
             <a href="https://www.naffy.io/akademia-agentow-ai/" class="cta-btn">Zapisz się na kurs wprowadzenie do LangGraph</a>
-            <div style="text-align: center; margin-top: 2rem;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/X6Juo628VZE?si=WXSoTJVCS3nQWik2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            <div id="youtube-container" style="text-align: center; margin-top: 2rem; position: relative; z-index: 3; min-height: 315px;"></div>
         </div>
     </header>
 
@@ -618,6 +616,12 @@
                     behavior: 'smooth'
                 });
             });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            const videoContainer = document.getElementById('youtube-container');
+            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/X6Juo628VZE?si=WXSoTJVCS3nQWik2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
         });
     </script>
 </body>
