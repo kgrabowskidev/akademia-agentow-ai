@@ -33,6 +33,7 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
+            scroll-padding-top: 70px; /* Adjust this value to match your navigation bar's height */
         }
         
         .container {
@@ -410,18 +411,18 @@
 </head>
 <body>
     <nav>
-        <div class="container">
+        <div class="container" >
             <div class="logo">
-                <a href="#" style="color: white; text-decoration: none;"><img src="Akademia_Agentow_AI_LOGO.png" alt="Logo" style="width: 50px; height: 50px;"></a>
+                <a href="#home" style="color: white; text-decoration: none;"><img src="Akademia_Agentow_AI_LOGO.png" alt="Logo" style="width: 50px; height: 50px;"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>                
+                <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>                
 				<li><a href="#key-concepts" style="color: white; text-decoration: none;">Kluczowe Pojęcia</a></li>
             </ul>
         </div>
     </nav>
     <header>
-        <div class="container">
+        <div class="container" id="home">
             <h1>Akademia Agentów AI</h1>
             <p class="subtitle">Rozwijaj kompetencje przyszłości - kompleksowe szkolenia i baza wiedzy o technologiach AI</p>
             <a href="https://www.naffy.io/akademia-agentow-ai/" class="cta-btn">Zapisz się na kurs wprowadzenie do LangGraph</a>
