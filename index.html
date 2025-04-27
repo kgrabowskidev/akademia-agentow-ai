@@ -26,13 +26,13 @@
             scroll-padding-top: 120px; /* Adjust this value to match your navigation bar's height */
         }
 
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--light);
@@ -40,13 +40,13 @@
             line-height: 1.6;
             scroll-padding-top: 70px; /* Adjust this value to match your navigation bar's height */
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
-        
+
         /* Navigation */
         nav {
             background-color: var(--primary-dark);
@@ -56,27 +56,27 @@
             top: 0;
             z-index: 100;
         }
-        
+
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
         }
-        
+
         .nav-links {
             list-style: none;
             display: flex;
         }
-        
+
         .nav-links li {
             margin-left: 2rem;
         }
-        
+
         header {
             background: linear-gradient(to right, var(--primary), var(--accent));
             color: white;
@@ -85,7 +85,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -96,32 +96,33 @@
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/><rect fill="rgba(255,255,255,0.05)" x="50" y="50" width="50" height="50"/></svg>');
             opacity: 0.3;
         }
-        
+
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             line-height: 1.2;
         }
-        
+
         h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             position: relative;
             z-index: 2;
         }
-        
+
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             color: var(--primary);
+            margin-top: 3rem; /* Added margin top for spacing between sections */
         }
-        
+
         h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: var(--primary-dark);
         }
-        
+
         .subtitle {
             font-size: 1.5rem;
             font-weight: 300;
@@ -132,7 +133,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .cta-btn {
             display: inline-block;
             background-color: var(--secondary);
@@ -148,24 +149,24 @@
             z-index: 2;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         .cta-btn:hover {
             background-color: var(--accent);
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        
+
         main {
             padding: 4rem 0;
         }
-        
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .card {
             background-color: white;
             border-radius: 1rem;
@@ -174,13 +175,16 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: flex; /* Added for icon alignment */
+            flex-direction: column; /* Added for icon alignment */
         }
-        
+
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .card::after {
             content: '';
             position: absolute;
@@ -190,7 +194,7 @@
             width: 100%;
             background: linear-gradient(to right, var(--primary), var(--secondary));
         }
-        
+
         .card-icon {
             display: flex;
             align-items: center;
@@ -202,18 +206,21 @@
             color: var(--secondary);
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
+            flex-shrink: 0; /* Prevent icon from shrinking */
         }
-        
+
         .card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
         }
-        
+
         .card p {
             color: #64748B;
             font-size: 0.95rem;
+            flex-grow: 1; /* Allow paragraph to take remaining space */
         }
-        
+
+
         .cta-section {
             background: linear-gradient(to right, var(--primary-dark), var(--primary));
             padding: 5rem 0;
@@ -222,7 +229,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta-section::before {
             content: '';
             position: absolute;
@@ -233,14 +240,14 @@
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><circle fill="rgba(255,255,255,0.05)" cx="25" cy="25" r="20"/><circle fill="rgba(255,255,255,0.05)" cx="75" cy="75" r="20"/></svg>');
             opacity: 0.3;
         }
-        
+
         .cta-section h2 {
             color: white;
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 2;
         }
-        
+
         .cta-section p {
             max-width: 700px;
             margin: 0 auto 2rem;
@@ -248,7 +255,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .cta-section .cta-btn {
             background-color: white;
             color: var(--primary);
@@ -257,36 +264,37 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .cta-section .cta-btn:hover {
             background-color: var(--light);
             color: var(--primary-dark);
         }
-        
+
         footer {
             background-color: var(--dark);
             color: var(--gray);
             padding: 3rem 0;
             text-align: center;
+            margin-top: 4rem; /* Added margin top */
         }
-        
+
         footer p {
             margin-bottom: 1rem;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .social-links a {
             color: var(--gray);
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
-        
+
         .social-links a:hover {
             color: white;
         }
@@ -296,15 +304,15 @@
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
-            
+
             .subtitle {
                 font-size: 1.25rem;
             }
-            
+
             .grid {
                 grid-template-columns: 1fr;
             }
@@ -321,50 +329,67 @@
                 transform: translateY(0);
             }
         }
-        
+
         .card {
             animation: fadeUp 0.6s ease-out forwards;
+            opacity: 0; /* Start hidden for animation */
         }
-        
-        .card:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-        
-        .card:nth-child(3) {
-            animation-delay: 0.2s;
-        }
-        
-        .card:nth-child(4) {
-            animation-delay: 0.3s;
-        }
-        
-        .card:nth-child(5) {
-            animation-delay: 0.4s;
-        }
-        
-        .card:nth-child(6) {
-            animation-delay: 0.5s;
-        }
-        
-        .card:nth-child(n+7) {
-            animation-delay: 0.6s;
-        }
+
+        /* Stagger animation delays for cards in different sections */
+        #key-concepts .grid .card:nth-child(1) { animation-delay: 0.0s; }
+        #key-concepts .grid .card:nth-child(2) { animation-delay: 0.05s; }
+        #key-concepts .grid .card:nth-child(3) { animation-delay: 0.1s; }
+        #key-concepts .grid .card:nth-child(4) { animation-delay: 0.15s; }
+        #key-concepts .grid .card:nth-child(5) { animation-delay: 0.2s; }
+        #key-concepts .grid .card:nth-child(6) { animation-delay: 0.25s; }
+        #key-concepts .grid .card:nth-child(7) { animation-delay: 0.3s; }
+        #key-concepts .grid .card:nth-child(8) { animation-delay: 0.35s; }
+        #key-concepts .grid .card:nth-child(9) { animation-delay: 0.4s; }
+        #key-concepts .grid .card:nth-child(10) { animation-delay: 0.45s; }
+        #key-concepts .grid .card:nth-child(11) { animation-delay: 0.5s; }
+        #key-concepts .grid .card:nth-child(12) { animation-delay: 0.55s; }
+        #key-concepts .grid .card:nth-child(13) { animation-delay: 0.6s; }
+        #key-concepts .grid .card:nth-child(14) { animation-delay: 0.65s; }
+        #key-concepts .grid .card:nth-child(15) { animation-delay: 0.7s; }
+        #key-concepts .grid .card:nth-child(16) { animation-delay: 0.75s; }
+        #key-concepts .grid .card:nth-child(17) { animation-delay: 0.8s; }
+        #key-concepts .grid .card:nth-child(18) { animation-delay: 0.85s; }
+        #key-concepts .grid .card:nth-child(19) { animation-delay: 0.9s; }
+        #key-concepts .grid .card:nth-child(20) { animation-delay: 0.95s; }
+
+        /* Apply base delay for the new section cards */
+        #agent-dev-kit .grid .card { animation-delay: 1.0s; } /* Start after the first section cards have likely appeared */
+        #agent-dev-kit .grid .card:nth-child(2) { animation-delay: 1.05s; }
+        #agent-dev-kit .grid .card:nth-child(3) { animation-delay: 1.1s; }
+        #agent-dev-kit .grid .card:nth-child(4) { animation-delay: 1.15s; }
+        #agent-dev-kit .grid .card:nth-child(5) { animation-delay: 1.2s; }
+        #agent-dev-kit .grid .card:nth-child(6) { animation-delay: 1.25s; }
+        #agent-dev-kit .grid .card:nth-child(7) { animation-delay: 1.3s; }
+        #agent-dev-kit .grid .card:nth-child(8) { animation-delay: 1.35s; }
+        #agent-dev-kit .grid .card:nth-child(9) { animation-delay: 1.4s; }
+        #agent-dev-kit .grid .card:nth-child(10) { animation-delay: 1.45s; }
+        #agent-dev-kit .grid .card:nth-child(11) { animation-delay: 1.5s; }
+        #agent-dev-kit .grid .card:nth-child(12) { animation-delay: 1.55s; }
+
+
         .content-wrapper {
-    display: flex;
-    gap: 2rem;
-}
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem; /* Add margin for spacing below heading */
+        }
 
         .sidebar {
             width: 250px;
             flex-shrink: 0;
             position: sticky;
-            top: 2rem;
+             /* Adjusted top value to account for nav bar */
+            top: calc(70px + 2rem); /* nav height + desired space */
             align-self: flex-start;
             background-color: white;
             border-radius: 1rem;
             padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-height: calc(100vh - 4rem);
+            max-height: calc(100vh - 70px - 4rem); /* viewport height - nav height - top/bottom spacing */
             overflow-y: auto;
         }
 
@@ -372,6 +397,7 @@
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--secondary);
+            margin-top: 0; /* Reset margin top for heading inside sidebar */
         }
 
         .sidebar ul {
@@ -398,18 +424,32 @@
 
         .main-content {
             flex: 1;
+            min-width: 0; /* Prevent content overflow issues in flex containers */
         }
 
-        @media (max-width: 768px) {
-            .content-wrapper {
+        /* Added style for embedded youtube video container */
+        .youtube-embed-container {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem; /* Added margin bottom for spacing before grid */
+            position: relative;
+            z-index: 3; /* Keep same z-index as header video */
+            min-height: 315px; /* Keep same min-height */
+        }
+
+
+        @media (max-width: 992px) { /* Adjust breakpoint for sidebar */
+             .content-wrapper {
                 flex-direction: column;
             }
-            
+
             .sidebar {
                 width: 100%;
                 position: relative;
                 top: 0;
                 margin-bottom: 2rem;
+                max-height: none; /* Remove max-height constraint */
+                overflow-y: visible; /* Allow content to flow */
             }
         }
     </style>
@@ -421,8 +461,9 @@
                 <a href="#home" style="color: white; text-decoration: none;"><img src="Akademia_Agentow_AI_LOGO.png" alt="Logo" style="width: 50px; height: 50px;"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>                
-				<li><a href="#key-concepts" style="color: white; text-decoration: none;">Kluczowe Pojęcia</a></li>
+                <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+                <li><a href="#key-concepts" style="color: white; text-decoration: none;">Kluczowe Pojęcia</a></li>
+                <li><a href="#agent-dev-kit" style="color: white; text-decoration: none;">Agent Development Kit (ADK)</a></li>
             </ul>
         </div>
     </nav>
@@ -436,15 +477,10 @@
     </header>
 
     <main>
-        <div class="container" id="key-concepts">
-            <h2>Kluczowe pojęcia</h2>
-            <p>Zrozum fundamenty nowoczesnej sztucznej inteligencji i poznaj technologie, które zmieniają świat.</p>
-<p>Agenci AI to przyszłość technologii - systemy zdolne do samodzielnego działania, podejmowania decyzji i współpracy z człowiekiem.</p>
-<p>Poniżej znajdziesz najważniejsze koncepcje, które pomogą Ci lepiej zrozumieć i wykorzystać potencjał tej rewolucyjnej technologii.</p>
-            <h2><span></span></h2>
-            
+         <div class="container" id="key-concepts">
+
             <div class="content-wrapper">
-                <div class="sidebar">
+                 <div class="sidebar">
                     <h3>Spis treści</h3>
                     <ul>
                         <li><a href="#agent-ai">Agent AI</a></li>
@@ -467,184 +503,350 @@
                         <li><a href="#autogpt">AutoGPT</a></li>
                         <li><a href="#uczenie-glebokie">Uczenie głębokie</a></li>
                         <li><a href="#etyka-ai">Etyka AI</a></li>
+                        <li><a href="#agent-dev-kit">Agent Development Kit</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="main-content">
+                    <h2>Kluczowe pojęcia</h2>
+                    <p>Zrozum fundamenty nowoczesnej sztucznej inteligencji i poznaj technologie, które zmieniają świat.</p>
+                    <p>Agenci AI to przyszłość technologii - systemy zdolne do samodzielnego działania, podejmowania decyzji i współpracy z człowiekiem.</p>
+                    <p>Poniżej znajdziesz najważniejsze koncepcje, które pomogą Ci lepiej zrozumieć i wykorzystać potencjał tej rewolucyjnej technologii.</p>
 
-            <div class="grid">
-                <div class="card" id="agent-ai">
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
+                    <div class="grid">
+                        <div class="card" id="agent-ai">
+                            <div class="card-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3>Agent AI</h3>
+                                <p>Program AI, który potrafi samodzielnie podejmować decyzje i działania, żeby osiągnąć wyznaczony cel. W odróżnieniu od zwykłego chatbota, agent AI może nie tylko prowadzić rozmowę, ale też wykonywać zadania - przeszukiwać internet, uruchamiać funkcje w aplikacji czy obsługiwać urządzenia.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="langgraph">
+                            <div class="card-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div>
+                                <h3>LangGraph</h3>
+                                <p>Framework do budowania agentów AI w formie grafu, stworzony jako rozszerzenie możliwości LangChain. Pozwala projektować elastyczne schematy z pętlami i rozgałęzieniami, definiując agenta AI jako zestaw powiązanych ze sobą modułów (węzłów).</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="llm">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h3>Duży model językowy (LLM)</h3>
+                                <p>Model AI przeszkolony na ogromnych zbiorach tekstu, zdolny do generowania i rozumienia języka naturalnego na zaawansowanym poziomie. Taki model ma miliardy parametrów, dzięki czemu może zapamiętać wiele wzorców językowych.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="pamiec-kontekstowa">
+                            <div class="card-icon">
+                                <i class="fas fa-memory"></i>
+                            </div>
+                            <div>
+                                <h3>Pamięć kontekstowa</h3>
+                                <p>Zdolność systemu AI do pamiętania poprzednich interakcji i informacji podczas dalszej rozmowy lub działania. Dzięki niej agent nie zapomina, o czym rozmawialiście przed chwilą i może wykorzystać wcześniejsze ustalenia.</p>
+                             </div>
+                        </div>
+
+                        <div class="card" id="inzynieria-promptow">
+                            <div class="card-icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                           <div>
+                                <h3>Inżynieria promptów</h3>
+                                <p>Sztuka odpowiedniego formułowania poleceń dla modeli AI, aby uzyskać od nich jak najlepsze rezultaty. Może to obejmować wskazanie modelowi roli, określenie formatu odpowiedzi albo podanie przykładów.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="chatbot">
+                            <div class="card-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div>
+                                <h3>Chatbot</h3>
+                                <p>Program komputerowy zaprojektowany do prowadzenia rozmowy z człowiekiem w języku naturalnym. Współczesne chatboty wykorzystujące LLM potrafią rozumieć kontekst rozmowy i udzielać szczegółowych odpowiedzi.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="narzedzia">
+                            <div class="card-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <h3>Narzędzia dla agenta AI</h3>
+                                <p>Zewnętrzne funkcje lub usługi, z których agent może korzystać, by wykonać swoje zadania. Dzięki narzędziom agent nie jest ograniczony tylko do tego, co "wie" jego model językowy – może aktywnie zdobywać nowe informacje.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="langchain">
+                            <div class="card-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                           <div>
+                                <h3>LangChain</h3>
+                                <p>Framework ułatwiający tworzenie aplikacji opartych o modele językowe (LLM). LangChain dostarcza gotowe komponenty, dzięki którym programista może łączyć modele AI z różnymi źródłami danych, narzędziami i logiką biznesową.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="rag">
+                            <div class="card-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div>
+                                <h3>Retrieval-Augmented Generation (RAG)</h3>
+                                <p>Technika tworzenia odpowiedzi przez model AI, która łączy generowanie tekstu z wyszukiwaniem informacji. Model najpierw przeszukuje zewnętrzne źródła danych, a następnie generuje odpowiedź na ich podstawie.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="wektorowa-baza">
+                            <div class="card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h3>Wektorowa baza danych</h3>
+                                <p>Specjalny rodzaj bazy danych zaprojektowany do przechowywania i wyszukiwania wektorów (np. embeddingów tekstu). Potrafi szybko odnaleźć wektory najbardziej zbliżone do zadanego.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="embedding">
+                            <div class="card-icon">
+                                <i class="fas fa-vector-square"></i>
+                            </div>
+                           <div>
+                                <h3>Embedding</h3>
+                                <p>Technika polegająca na zamianie danych (np. słów, zdań) na wektory liczb, tak aby liczby te oddawały znaczenie tych danych. Embeddingi pozwalają AI porównywać znaczenie tekstów.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="nlp">
+                            <div class="card-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div>
+                                <h3>Przetwarzanie języka naturalnego (NLP)</h3>
+                                <p>Dziedzina sztucznej inteligencji skupiona na zrozumieniu i generowaniu ludzkiego języka przez maszyny. Systemy NLP starają się pojąć tekst lub mowę w taki sposób, jak robi to człowiek.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="gen-ai">
+                            <div class="card-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div>
+                                <h3>Generatywna sztuczna inteligencja</h3>
+                                <p>Rodzaj AI, która tworzy nowe treści: teksty, obrazy, muzykę czy inne dane, zamiast tylko je klasyfikować czy analizować. Pozwala np. na tworzenie unikalnych obrazów z opisu tekstowego.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="prompt">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div>
+                                <h3>Prompt</h3>
+                                <p>Wejściowe zapytanie lub instrukcja, którą przekazujemy modelowi językowemu. Promptem może być pytanie zadane do chatbota, prośba o wygenerowanie tekstu lub kawałek rozpoczętego zdania do dokończenia.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="halucynacje">
+                            <div class="card-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div>
+                                <h3>Halucynacje AI</h3>
+                                <p>Sytuacja, gdy AI wymyśla odpowiedź, która brzmi przekonująco, ale nie jest zgodna z prawdą. Model językowy, próbując odpowiedzieć na pytanie, może podać zmyślone "fakty" – np. wymyślone liczby czy fałszywe informacje.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="pipeline">
+                            <div class="card-icon">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div>
+                                <h3>Pipeline</h3>
+                                <p>Szereg kroków, które wykonujemy kolejno, aby osiągnąć rezultat. W kontekście agentów i modeli językowych pipeline to często ułożenie kilku operacji po sobie dla uzyskania ostatecznego wyniku.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="fine-tuning">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3>Fine-tuning</h3>
+                                <p>Dodatkowe trenowanie modelu AI, który już wcześniej został wstępnie wytrenowany, w celu przystosowania go do konkretnego zadania lub dziedziny. Dzięki temu model lepiej radzi sobie w wąskiej specjalizacji.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="autogpt">
+                            <div class="card-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h3>AutoGPT</h3>
+                                <p>Eksperymentalny projekt autonomicznego agenta AI, który sam inicjuje kolejne działania, by osiągnąć ogólny cel zadany przez użytkownika, z minimalnym nadzorem człowieka.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="uczenie-glebokie">
+                            <div class="card-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div>
+                                <h3>Uczenie głębokie</h3>
+                                <p>Specjalny rodzaj uczenia maszynowego, który wykorzystuje bardzo złożone, wielowarstwowe sieci neuronowe. Im więcej warstw, tym bardziej złożone zależności może nauczyć się model.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" id="etyka-ai">
+                            <div class="card-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                           <div>
+                                <h3>Etyka AI</h3>
+                                <p>Zbiór zagadnień dotyczących odpowiedzialnego tworzenia i używania sztucznej inteligencji. Obejmuje m.in. dbałość o prywatność, unikanie dyskryminacji i uprzedzeń oraz zapewnienie bezpieczeństwa.</p>
+                            </div>
+                        </div>
+                    </div> </div> </div> </div> <div class="container" id="agent-dev-kit">
+             <div class="main-content" style="width: 100%;">
+                <h2>Agent Development Kit (ADK)</h2>
+                <p>Framework zaprojektowany, aby umożliwić deweloperom bezproblemowe tworzenie, zarządzanie, ewaluację i wdrażanie agentów opartych na AI.</p>
+                <p>Zapewnia solidne i elastyczne środowisko do budowy zarówno konwersacyjnych, jak i niekonwersacyjnych agentów, zdolnych do obsługi złożonych zadań i przepływów pracy.</p>
+
+                <div id="youtube-container-adk" style="text-align: center; margin-top: 2rem; position: relative; z-index: 3; min-height: 315px;"></div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon">
+                             <i class="fas fa-cogs"></i>
+                        </div>
+                        <div>
+                            <h3>Agent</h3>
+                            <p>Podstawowa jednostka robocza przeznaczona do określonych zadań. Może używać modeli językowych (LlmAgent) do złożonego rozumowania lub działać jako deterministyczny kontroler wykonania (np. SequentialAgent, ParallelAgent).</p>
+                        </div>
                     </div>
-                    <h3>Agent AI</h3>
-                    <p>Program AI, który potrafi samodzielnie podejmować decyzje i działania, żeby osiągnąć wyznaczony cel. W odróżnieniu od zwykłego chatbota, agent AI może nie tylko prowadzić rozmowę, ale też wykonywać zadania - przeszukiwać internet, uruchamiać funkcje w aplikacji czy obsługiwać urządzenia.</p>
-                </div>
-                
-                <div class="card" id="langgraph">
-                    <div class="card-icon">
-                        <i class="fas fa-project-diagram"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                             <i class="fas fa-tools"></i>
+                        </div>
+                       <div>
+                            <h3>Tool (Narzędzie)</h3>
+                            <p>Daje agentom możliwości wykraczające poza konwersację: interakcję z zewnętrznymi API, wyszukiwanie informacji, uruchamianie kodu (FunctionTool) czy wywoływanie innych agentów (AgentTool).</p>
+                        </div>
                     </div>
-                    <h3>LangGraph</h3>
-                    <p>Framework do budowania agentów AI w formie grafu, stworzony jako rozszerzenie możliwości LangChain. Pozwala projektować elastyczne schematy z pętlami i rozgałęzieniami, definiując agenta AI jako zestaw powiązanych ze sobą modułów (węzłów).</p>
-                </div>
-                
-                <div class="card" id="llm">
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                       <div>
+                            <h3>Session & State (Sesja i Stan)</h3>
+                            <p>Zarządza kontekstem pojedynczej konwersacji (Session), w tym jej historią (Events) i pamięcią roboczą agenta dla tej konwersacji (State).</p>
+                        </div>
                     </div>
-                    <h3>Duży model językowy (LLM)</h3>
-                    <p>Model AI przeszkolony na ogromnych zbiorach tekstu, zdolny do generowania i rozumienia języka naturalnego na zaawansowanym poziomie. Taki model ma miliardy parametrów, dzięki czemu może zapamiętać wiele wzorców językowych.</p>
-                </div>
-                
-                <div class="card" id="pamiec-kontekstowa">
-                    <div class="card-icon">
-                        <i class="fas fa-memory"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                       <div>
+                            <h3>Memory (Pamięć Długoterminowa)</h3>
+                            <p>Umożliwia agentom przypominanie sobie informacji o użytkowniku pomiędzy *wieloma* sesjami, zapewniając długoterminowy kontekst (w odróżnieniu od krótkoterminowego Stanu).</p>
+                        </div>
                     </div>
-                    <h3>Pamięć kontekstowa</h3>
-                    <p>Zdolność systemu AI do pamiętania poprzednich interakcji i informacji podczas dalszej rozmowy lub działania. Dzięki niej agent nie zapomina, o czym rozmawialiście przed chwilą i może wykorzystać wcześniejsze ustalenia.</p>
-                </div>
-                
-                <div class="card" id="inzynieria-promptow">
-                    <div class="card-icon">
-                        <i class="fas fa-keyboard"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                             <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Artifact Management (Zarządzanie Artefaktami)</h3>
+                            <p>Pozwala agentom zapisywać, ładować i zarządzać plikami lub danymi binarnymi (np. obrazy, PDF) powiązanymi z sesją lub użytkownikiem.</p>
+                        </div>
                     </div>
-                    <h3>Inżynieria promptów</h3>
-                    <p>Sztuka odpowiedniego formułowania poleceń dla modeli AI, aby uzyskać od nich jak najlepsze rezultaty. Może to obejmować wskazanie modelowi roli, określenie formatu odpowiedzi albo podanie przykładów.</p>
-                </div>
-                
-                <div class="card" id="chatbot">
-                    <div class="card-icon">
-                        <i class="fas fa-comments"></i>
+
+                     <div class="card">
+                        <div class="card-icon">
+                             <i class="fas fa-tasks"></i>
+                        </div>
+                       <div>
+                            <h3>Planning (Planowanie)</h3>
+                            <p>Zaawansowana zdolność, dzięki której agenci mogą rozkładać złożone cele na mniejsze kroki i planować ich realizację, np. przy użyciu planera typu ReAct.</p>
+                        </div>
                     </div>
-                    <h3>Chatbot</h3>
-                    <p>Program komputerowy zaprojektowany do prowadzenia rozmowy z człowiekiem w języku naturalnym. Współczesne chatboty wykorzystujące LLM potrafią rozumieć kontekst rozmowy i udzielać szczegółowych odpowiedzi.</p>
-                </div>
-                
-                <div class="card" id="narzedzia">
-                    <div class="card-icon">
-                        <i class="fas fa-tools"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div>
+                            <h3>Runner (Silnik Wykonawczy)</h3>
+                             <p>Komponent zarządzający przepływem wykonania, koordynujący interakcje agentów na podstawie zdarzeń (Events) i współpracujący z usługami backendowymi.</p>
+                         </div>
                     </div>
-                    <h3>Narzędzia dla agenta AI</h3>
-                    <p>Zewnętrzne funkcje lub usługi, z których agent może korzystać, by wykonać swoje zadania. Dzięki narzędziom agent nie jest ograniczony tylko do tego, co "wie" jego model językowy – może aktywnie zdobywać nowe informacje.</p>
-                </div>
-                
-                <div class="card" id="langchain">
-                    <div class="card-icon">
-                        <i class="fas fa-link"></i>
+
+                     <div class="card">
+                        <div class="card-icon">
+                             <i class="fas fa-sitemap"></i>
+                        </div>
+                       <div>
+                            <h3>Multi-Agent System Design</h3>
+                            <p>Łatwe budowanie aplikacji składających się z wielu wyspecjalizowanych, hierarchicznie ułożonych agentów, które mogą koordynować zadania i delegować podzadania.</p>
+                        </div>
                     </div>
-                    <h3>LangChain</h3>
-                    <p>Framework ułatwiający tworzenie aplikacji opartych o modele językowe (LLM). LangChain dostarcza gotowe komponenty, dzięki którym programista może łączyć modele AI z różnymi źródłami danych, narzędziami i logiką biznesową.</p>
-                </div>
-                
-                <div class="card" id="rag">
-                    <div class="card-icon">
-                        <i class="fas fa-search-plus"></i>
+
+                    <div class="card">
+                        <div class="card-icon">
+                           <i class="fas fa-random"></i>
+                        </div>
+                       <div>
+                            <h3>Flexible Orchestration</h3>
+                            <p>Definiowanie złożonych przepływów pracy agentów przy użyciu agentów przepływu (Sequential, Parallel, Loop) oraz dynamicznego routingu opartego na LLM.</p>
+                         </div>
                     </div>
-                    <h3>Retrieval-Augmented Generation (RAG)</h3>
-                    <p>Technika tworzenia odpowiedzi przez model AI, która łączy generowanie tekstu z wyszukiwaniem informacji. Model najpierw przeszukuje zewnętrzne źródła danych, a następnie generuje odpowiedź na ich podstawie.</p>
-                </div>
-                
-                <div class="card" id="wektorowa-baza">
-                    <div class="card-icon">
-                        <i class="fas fa-database"></i>
+                     <div class="card">
+                        <div class="card-icon">
+                           <i class="fas fa-terminal"></i>
+                        </div>
+                       <div>
+                            <h3>Integrated Developer Tooling</h3>
+                            <p>Narzędzia (CLI, Dev UI) ułatwiające lokalny rozwój, inspekcję kroków wykonania, debugowanie interakcji i wizualizację definicji agentów.</p>
+                         </div>
                     </div>
-                    <h3>Wektorowa baza danych</h3>
-                    <p>Specjalny rodzaj bazy danych zaprojektowany do przechowywania i wyszukiwania wektorów (np. embeddingów tekstu). Potrafi szybko odnaleźć wektory najbardziej zbliżone do zadanego.</p>
-                </div>
-                
-                <div class="card" id="embedding">
-                    <div class="card-icon">
-                        <i class="fas fa-vector-square"></i>
+                     <div class="card">
+                        <div class="card-icon">
+                           <i class="fas fa-plug"></i>
+                        </div>
+                       <div>
+                            <h3>Extensibility & Interoperability</h3>
+                             <p>Otwarty ekosystem pozwalający na łatwą integrację i ponowne wykorzystanie narzędzi z innych frameworków, takich jak LangChain czy CrewAI.</p>
+                         </div>
                     </div>
-                    <h3>Embedding</h3>
-                    <p>Technika polegająca na zamianie danych (np. słów, zdań) na wektory liczb, tak aby liczby te oddawały znaczenie tych danych. Embeddingi pozwalają AI porównywać znaczenie tekstów.</p>
-                </div>
-                
-                <div class="card" id="nlp">
-                    <div class="card-icon">
-                        <i class="fas fa-microscope"></i>
+                     <div class="card">
+                        <div class="card-icon">
+                           <i class="fas fa-bell"></i>
+                        </div>
+                       <div>
+                             <h3>Callbacks & Events</h3>
+                             <p>Możliwość uruchamiania własnego kodu (Callbacks) w kluczowych momentach oraz śledzenie historii interakcji poprzez Zdarzenia (Events) - podstawowe jednostki komunikacji.</p>
+                         </div>
                     </div>
-                    <h3>Przetwarzanie języka naturalnego (NLP)</h3>
-                    <p>Dziedzina sztucznej inteligencji skupiona na zrozumieniu i generowaniu ludzkiego języka przez maszyny. Systemy NLP starają się pojąć tekst lub mowę w taki sposób, jak robi to człowiek.</p>
-                </div>
-                
-                <div class="card" id="gen-ai">
-                    <div class="card-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3>Generatywna sztuczna inteligencja</h3>
-                    <p>Rodzaj AI, która tworzy nowe treści: teksty, obrazy, muzykę czy inne dane, zamiast tylko je klasyfikować czy analizować. Pozwala np. na tworzenie unikalnych obrazów z opisu tekstowego.</p>
-                </div>
-                
-                <div class="card" id="prompt">
-                    <div class="card-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3>Prompt</h3>
-                    <p>Wejściowe zapytanie lub instrukcja, którą przekazujemy modelowi językowemu. Promptem może być pytanie zadane do chatbota, prośba o wygenerowanie tekstu lub kawałek rozpoczętego zdania do dokończenia.</p>
-                </div>
-                
-                <div class="card" id="halucynacje">
-                    <div class="card-icon">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </div>
-                    <h3>Halucynacje AI</h3>
-                    <p>Sytuacja, gdy AI wymyśla odpowiedź, która brzmi przekonująco, ale nie jest zgodna z prawdą. Model językowy, próbując odpowiedzieć na pytanie, może podać zmyślone "fakty" – np. wymyślone liczby czy fałszywe informacje.</p>
-                </div>
-                
-                <div class="card" id="pipeline">
-                    <div class="card-icon">
-                        <i class="fas fa-sync"></i>
-                    </div>
-                    <h3>Pipeline</h3>
-                    <p>Szereg kroków, które wykonujemy kolejno, aby osiągnąć rezultat. W kontekście agentów i modeli językowych pipeline to często ułożenie kilku operacji po sobie dla uzyskania ostatecznego wyniku.</p>
-                </div>
-                
-                <div class="card" id="fine-tuning">
-                    <div class="card-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Fine-tuning</h3>
-                    <p>Dodatkowe trenowanie modelu AI, który już wcześniej został wstępnie wytrenowany, w celu przystosowania go do konkretnego zadania lub dziedziny. Dzięki temu model lepiej radzi sobie w wąskiej specjalizacji.</p>
-                </div>
-                
-                <div class="card" id="autogpt">
-                    <div class="card-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h3>AutoGPT</h3>
-                    <p>Eksperymentalny projekt autonomicznego agenta AI, który sam inicjuje kolejne działania, by osiągnąć ogólny cel zadany przez użytkownika, z minimalnym nadzorem człowieka.</p>
-                </div>
-                
-                <div class="card" id="uczenie-glebokie">
-                    <div class="card-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <h3>Uczenie głębokie</h3>
-                    <p>Specjalny rodzaj uczenia maszynowego, który wykorzystuje bardzo złożone, wielowarstwowe sieci neuronowe. Im więcej warstw, tym bardziej złożone zależności może nauczyć się model.</p>
-                </div>
-                
-                <div class="card" id="etyka-ai">
-                    <div class="card-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Etyka AI</h3>
-                    <p>Zbiór zagadnień dotyczących odpowiedzialnego tworzenia i używania sztucznej inteligencji. Obejmuje m.in. dbałość o prywatność, unikanie dyskryminacji i uprzedzeń oraz zapewnienie bezpieczeństwa.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </main>
+
+                </div> </div> </div> </main>
 
 
-    
     <footer>
         <div class="container">
-            <p>&copy; 2025 Akademia Agentów AI. Wszelkie prawa zastrzeżone.</p>
+            <p>© 2025 Akademia Agentów AI. Wszelkie prawa zastrzeżone.</p>
             <p>Zbuduj przyszłość z nami – poznaj świat AI i twórz inteligentne rozwiązania.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/kgrabowskidev/public"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/posts/akademia-agent%C3%B3w-ai_kurs-akademia-agent%C3%B3w-ai-wprowadzenie-activity-7313846035305443329-xhr5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAnEiu0B8ULu4LrjgGnqpffTMMiU6lxVgeg"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.youtube.com/@AkademiaAgent%C3%B3wAI"><i class="fab fa-youtube"></i></a>
             </div>
@@ -656,18 +858,38 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                     // Calculate position considering sticky nav height
+                    const headerOffset = document.querySelector('nav').offsetHeight + 20; // nav height + extra space
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
             });
         });
     </script>
     <script>
+        // Load header video
         window.addEventListener('load', function() {
-            const videoContainer = document.getElementById('youtube-container');
-            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/X6Juo628VZE?si=WXSoTJVCS3nQWik2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+            const headerVideoContainer = document.getElementById('youtube-container');
+            if (headerVideoContainer) {
+                headerVideoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/X6Juo628VZE?si=WXSoTJVCS3nQWik2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+            }
+            // Note: The ADK video iframe is now directly in the HTML structure where needed
         });
+        window.addEventListener('load', function() {
+            const headerVideoContainer = document.getElementById('youtube-container-adk');
+            if (headerVideoContainer) {
+                headerVideoContainer.innerHTML = '<iframe width="560" height="315" src="https://youtube.com/embed/YsCLQDXfCm4?si=S5BfPOXmOhANmZ56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+            }
+            // Note: The ADK video iframe is now directly in the HTML structure where needed
+        });
+      
     </script>
 </body>
 </html>
